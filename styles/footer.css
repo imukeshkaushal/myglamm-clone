@@ -1,0 +1,84 @@
+#footer{
+    background-color: white;
+    height: auto;
+    width: 100%;
+    background-color: aquamarine;
+    background: #fff;
+    float: left;
+    position: relative;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    padding: 47px 0 7px;
+    z-index: 2;
+}
+#footer-pages{
+    padding: 0px 75px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+#footer-pages>div h6{
+    font-size: 15px;
+}
+#footer-pages>div p{
+    font-size: 14px;
+    
+}
+#footer-pages> div a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer Form & Social Media */
+
+#footer-form{
+    padding: 0px 75px;
+    display: grid;
+    grid-template-columns: 450px 310px 380px;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding-bottom: 50px;
+    
+}
+
+#footer-form>div:nth-child(1)>h5{
+    font-size: 16px;
+    font-weight: 400;
+}
+#footer-form>div:nth-child(2){
+   display: flex;
+   gap:15px;
+   justify-content: center;
+   align-items: center;
+   padding-top: 40px;
+}
+#footer-form>div:nth-child(3)>h5{
+    font-size: 16px;
+    font-weight: 400;
+}
+#input-groups>input{
+    width: 50%;
+    padding: 10px 20px;
+}
+#input-groups>button{
+    padding: 10px 20px;
+    margin-left: -5px;
+    color: white;
+    background-color: black;
+}
+
+#input-groups{
+    margin-top: -10px;
+    padding-bottom: 20px;
+}
+#applinks{
+    display: flex;
+    gap: 50px;
+    
+}
+#applinks>img{
+    width: 30%;
+    margin-left: -12px;
+    padding-left: 0px;
+    
+}
