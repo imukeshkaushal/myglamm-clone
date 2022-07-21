@@ -1,0 +1,104 @@
+/* Body is default for whole Page */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#navbar{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+}
+
+/* Navbar Top Notification Bar Started */
+
+#topbar{
+    padding: 0px 75px;
+    font-size: 12px;
+    background-color: #fee8e8;
+    
+}
+#content{
+    display: flex;
+    justify-content: space-between;
+}
+#leftside,#rightside{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+#leftside>img+p{
+    padding-left: 5px;
+    
+}
+#leftside>p:last-child{
+    margin-left: 40px;
+    color: #f67e7e;
+}
+#rightside{
+    font-size: 14px;
+}
+#rightside>p{
+    padding-left: 5px;
+}
+/* Navbar Top Notification Bar Completed */
+
+/* --------------------------------------------------------------------------- */
+
+/* Navbar Middle Bar CSS Started */
+
+#middlebar{
+    padding: 0px 75px;
+    display: flex;
+    justify-content: space-between;
+}
+#logo-search{
+    display: flex;
+    gap: 45px;
+    padding: 10px 0px;
+    width: 57%;
+}
+#logo-search>img{
+    width: 150px;
+}
+#logo-search>input{
+    width: 100%;
+    align-items: center;
+    margin-top: 5px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border:1px solid rgb(156, 154, 154);
+    background-color: rgb(245, 245, 245);
+    
+}
+#page-icons{
+    align-items: center;
+    display: flex;
+    gap: 40px;
+}
+#page-icons>img{
+    width: 30px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Navbar Bottm Bar CSS Started */
+#bottomBar{
+    padding: 0px 75px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%);
+    
+}
+#bottomBar>div{
+    padding-bottom: 10px;
+    padding-top: 25px;
+}
+#bottomBar>div:hover{
+    border-bottom: 3px solid #f67e7e;
+    cursor: pointer;
+}
