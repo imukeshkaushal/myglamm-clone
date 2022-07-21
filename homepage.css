@@ -35,14 +35,14 @@
     margin: auto;
     margin-top: 30px;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 1.1;
-    font-weight: 600;
-    width: max-content;
-    margin-bottom: 2.5rem;
     text-transform: uppercase;
-    padding: 0 5px;
-    border-bottom:7px solid #ff9797;
+    padding-top: 10%;
+    margin-left: 45%;
+    width: fit-content;
+    height: 15px;
+    border-bottom: 13px solid rgb(247, 143, 195);
     font-size: 24px;
+    margin-bottom: 20px;
 }
 #spotlight-content{
     padding: 0px 75px;
