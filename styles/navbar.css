@@ -4,6 +4,9 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    
+    
+    
 }
 #navbar{
     height: auto;
@@ -11,6 +14,8 @@ body{
     background-color: white;
     position: fixed;
     z-index: 10;
+    top: 0px;
+    
 }
 
 /* Navbar Top Notification Bar Started */
