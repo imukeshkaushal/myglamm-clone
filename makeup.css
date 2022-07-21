@@ -1,0 +1,88 @@
+body{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#page-name{
+    text-align: center;
+    font-size: 14px;
+    width: 85%;
+    margin: auto;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    border-bottom: 1px solid rgb(161, 160, 160);
+    
+    
+}
+#page-name>p>span{
+    font-weight: bold;
+}
+#page-name+h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 45%;
+    width: fit-content;
+    padding-top: 20px;
+    height: 25px;
+    border-bottom: 13px solid rgb(247, 143, 195);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+#makeup-div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    margin: auto;
+    margin-top: 7%;
+    width: 85%;
+    margin-bottom: 3%;
+    
+}
+#makeup-div img{
+    width: 100%;
+}
+#makeup-div img:hover{
+    transform: scale(1.1);
+}
+#makeup-div>div{
+    border: 1px solid rgb(159, 158, 158);
+    padding: 40px 40px 0px 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+.cutPrice{
+    text-decoration: line-through;
+    color: rgb(160, 159, 159);
+}
+#makeup-div>div>h3{
+    width: 250px;
+    white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  
+}
+#makeup-div>div>p{
+    width: 250px;
+    white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+#makeup-div>div>img{
+    text-align: center;
+}
+.price-flex{
+    display: flex;
+    gap: 50px;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+}
+.cartBtn{
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
