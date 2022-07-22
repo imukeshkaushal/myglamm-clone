@@ -153,39 +153,94 @@ localStorage.setItem("makeupArr",JSON.stringify(makeupData));
 console.log(makeupData)
 
 let makeupList = JSON.parse(localStorage.getItem("makeupArr")) || [];
+
 let cartData = JSON.parse(localStorage.getItem("cartArr"))||[];
 
-makeupList.map(function(el,index){
-    let div = document.createElement("div");
-    let image = document.createElement("img");
-    image.src = el.img;
+let sortPrice = document.querySelector("#priceSort");
+sortPrice.addEventListener("change",function(){
+    let selected = document.querySelector("#priceSort").value;
+    if(selected == "high"){
+        makeupList.sort(function(a,b){
+            return b.price - a.price;
+        })
+        display(makeupList)
+    }
+    if(selected == "low"){
+        makeupList.sort(function(a,b){
+            return a.price - b.price;
+        })
+        display(makeupList)
+    }
 
-    let heading = document.createElement("h3");
-    heading.innerText = el.heading;
-    let desc = document.createElement("p");
-    desc.innerText = el.desc;
-    
-    let div1 = document.createElement("div");
-    div1.setAttribute("class","price-flex")
-    let price = document.createElement("p");
-    price.innerText = "₹ " +el.price;
-    let sortPrice = document.createElement("p");
-    sortPrice.setAttribute("class","cutPrice")
-    sortPrice.innerText = el.shortPrice;
-    let btn = document.createElement("p");
-    btn.setAttribute("class","cartBtn");
-    btn.innerText = "+"
-    btn.addEventListener("click",function(){
-        cartFunction(el,index);
-    })
-
-    div1.append(price,sortPrice,btn);
-    
-    div.append(image,heading,desc,div1);
-    document.querySelector("#makeup-div").append(div);
 })
 
-function cartFunction(el){
+let sortName = document.querySelector("#nameSort");
+sortName.addEventListener("change",function(){
+    let selected = document.querySelector("#nameSort").value;
+    if(selected == "a"){
+        makeupList.sort(function(a,b){
+            let x = a.heading.toUpperCase();
+            let y = b.heading.toUpperCase();
+
+            if(x>y) return 1;
+            if(x<y) return -1;
+            return 0;
+        })
+        display(makeupList);
+    }
+    if(selected == "z"){
+        makeupList.sort(function(a,b){
+            let x = a.heading.toUpperCase();
+            let y = b.heading.toUpperCase();
+
+            if(x>y) return -1;
+            if(x<y) return 1;
+            return 0;
+        })
+        display(makeupList);
+    }
+})
+
+display(makeupList);
+
+function display(makeupList){
+    document.querySelector("#makeup-div").innerHTML = "";
+    makeupList.map(function(el,index){
+        let div = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = el.img;
+    
+        let heading = document.createElement("h3");
+        heading.innerText = el.heading;
+        let desc = document.createElement("p");
+        desc.innerText = el.desc;
+        
+        let div1 = document.createElement("div");
+        div1.setAttribute("class","price-flex")
+        let price = document.createElement("p");
+        price.innerText = "₹ " +el.price;
+        let sortPrice = document.createElement("p");
+        sortPrice.setAttribute("class","cutPrice")
+        sortPrice.innerText = el.shortPrice;
+        let btn = document.createElement("p");
+        btn.setAttribute("class","cartBtn");
+        btn.innerText = "+"
+        btn.addEventListener("click",function(){
+            cartFunction(el,index);
+        })
+    
+        div1.append(price,sortPrice,btn);
+        
+        div.append(image,heading,desc,div1);
+        document.querySelector("#makeup-div").append(div);
+    })
+    
+}
+
+function cartFunction(el,index){
     cartData.push(el);
+    makeupList.splice(index,1);
+    localStorage.setItem("makeupArr",JSON.stringify(makeupList));
+    display(makeupList);
     localStorage.setItem("cartArr",JSON.stringify(cartData));
 }
