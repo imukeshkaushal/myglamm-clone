@@ -1,0 +1,103 @@
+body{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#products-shown{
+    width: 80%;
+}
+#haircare-div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    padding: 0px 75px;
+    width: 80%;
+    margin-bottom: 3%;
+    
+}
+#haircare-div img{
+    width: 100%;
+}
+#haircare-div img:hover{
+    transform: scale(1.1);
+}
+#haircare-div>div{
+    border: 1px solid rgb(159, 158, 158);
+    padding: 40px 40px 0px 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+#haircare-div>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.cutPrice{
+    text-decoration: line-through;
+    color: rgb(160, 159, 159);
+}
+#haircare-div>div>h3{
+    width: 250px;
+    white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  text-align: center;
+  
+}
+#haircare-div>div>p{
+    width: 250px;
+    white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+#haircare-div>div>img{
+    text-align: center;
+}
+.price-flex{
+    display: flex;
+    gap: 50px;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+}
+.cartBtn{
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
+#flex-total>button{
+    padding: 15px 50px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#total-price{
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-top: 7%;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-bottom:2% ;
+    border-radius: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+#total-price>h3{
+    text-align: center;
+    color: green;
+    font-size: 25px;
+}
+#flex-total{
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
