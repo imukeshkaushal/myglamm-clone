@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#signup-page{
+    width: 30%;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: auto;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+#signup-page>form>img{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+#signup-page>form>label{
+    margin-top: 25px;
+    display: block;
+    font-size: 14px;
+}
+#signup-page input[type = "email"],input[type = "number"],input[type = "password"]{
+    width: 90%;
+    margin-top: 5px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(161, 161, 161);
+
+}
+#signup-page span{
+    color: blue;
+}
+
+#signup-page input[type="submit"]{
+    margin-top: 40px;
+    padding: 7px 60px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
