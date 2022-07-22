@@ -25,7 +25,7 @@ body{
     font-size: 40px;
     margin-bottom: 20px;
 }
-#makeup-div{
+#haircare-div{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 40px;
@@ -35,13 +35,13 @@ body{
     margin-bottom: 3%;
     
 }
-#makeup-div img{
+#haircare-div img{
     width: 100%;
 }
-#makeup-div img:hover{
+#haircare-div img:hover{
     transform: scale(1.1);
 }
-#makeup-div>div{
+#haircare-div>div{
     border: 1px solid rgb(159, 158, 158);
     padding: 40px 40px 0px 40px;
     align-items: center;
@@ -53,20 +53,20 @@ body{
     text-decoration: line-through;
     color: rgb(160, 159, 159);
 }
-#makeup-div>div>h3{
+#haircare-div>div>h3{
     width: 250px;
     white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis; 
   
 }
-#makeup-div>div>p{
+#haircare-div>div>p{
     width: 250px;
     white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis; 
 }
-#makeup-div>div>img{
+#haircare-div>div>img{
     text-align: center;
 }
 .price-flex{
