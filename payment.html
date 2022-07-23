@@ -5,91 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout Page</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
     <style>
-         body {
-        margin: 0;
-        padding: 0;
+      #middlebar{
+          box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%);
+          margin-bottom: 0px;
       }
-      #container-payment {
-        width: 35%;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        margin: auto;
-        height: auto;
-        font-family: sans-serif;
-        padding-left: 20px;
-        padding-top: 20px;
-        border-radius: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        margin-top: 50px;
-      }
-      h3 {
-        text-align: center;
-        padding-right: 30px;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="number"],
-      input[type="password"],input[type="date"] {
-        line-height: 30px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-        border-radius: 0.375rem;
-        padding: 0.5rem 0.75rem;
-        width: 89%;
-        border: 1px solid rgba(128, 128, 128, 0.903);
-      }
-      select{
-        line-height: 30px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-        border-radius: 0.375rem;
-        padding: 0.5rem 0.75rem;
-        width: 95%;
-        height: 50px;
-        border: 1px solid rgba(128, 128, 128, 0.903);
-      }
-      p {
-        text-align: center;
-        padding-right: 30px;
-        font-size: 14px;
-        color: rgb(151, 150, 150);
-      }
-      form input[type="submit"] + p {
-        text-align: center;
-        padding-right: 30px;
-        font-size: 16px;
-        color: rgb(151, 150, 150);
-      }
-      span {
-        color: rgb(0, 98, 255);
-        cursor: pointer;
-      }
-      input[type="submit"] {
-        display: flex;
-        background-color: rgb(0, 98, 255);
-        color: white;
-        border: 0px;
-        height: 3rem;
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        font-weight: 600;
-        width: 95%;
-        border-width: 1px;
-        margin-right: 30px;
-      }
-      a {
-        text-decoration: none;
-        color: rgb(0, 98, 255);
-      }
-    </style>
+      
+  </style>
   </head>
   <body>
+    <div id="middlebar">
+      <div id="logo-search">
+          <img style="width:150px ; height:50px" src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="investor">
+          <input type="text" placeholder="Find Lipstick, Eyeliner, Makeup Tutorial, etc">
+      </div>
+      <div id="page-icons">
+          <img style="margin-top:0px ;" id="cart" src="https://cdn-icons-png.flaticon.com/512/126/126515.png" alt="">
+          <img id="login" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="">
+      </div>
+  </div>
 
     <div id="container-payment">
         <form>
@@ -129,25 +65,5 @@
         </form>
   </body>
 </html>
-<script>
-    let form = document.querySelector("form");
-    form.addEventListener("submit",myFunction);
-    function myFunction(event){
-        event.preventDefault();
-        let obj = {
-            name : form.name.value,
-            cardNumber : form.cardNumber.value,
-            cardType : form.card.value,
-            cvv : form.cvv.value,
-            expireDate : form.date.value
-        }
-
-        if(obj.name == "" || obj.cardNumber == "" || obj.cardType == "" || obj.cvv == "" || obj.expireDate == ""){
-            alert("Input Fields Are Empty");
-            return;
-        }
-        else{
-            window.location.href = "otp.html";
-        }
-    }
-</script>
+<script src="./scripts/payment.js"></script>
+<script src="./scripts/navbar.js"></script>

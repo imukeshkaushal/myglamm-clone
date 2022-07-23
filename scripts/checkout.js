@@ -10,7 +10,7 @@ if(price >= 500){
 }
 else{
     shipping.innerText = 41;
-    gettingPrice = gettingPrice - 41;
+    gettingPrice = gettingPrice + 41;
 }
 console.log(gettingPrice)
 document.querySelector("#total-amount").innerText ="Rs. " +gettingPrice;
@@ -34,3 +34,6 @@ document.querySelector("#apply").addEventListener("click",function(){
 
 })
 
+document.querySelector("#btn-pay").addEventListener("click",function(){
+    window.location.href = "payment.html";
+})

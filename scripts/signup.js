@@ -12,4 +12,12 @@ function myFunction(event){
     }
     usersData.push(obj);
     localStorage.setItem("usersArr",JSON.stringify(usersData));
+    if(obj.name == "" || obj.email == "" || obj.password == ""){
+        alert("Some Fields are empty. Make Sure firstly fill all the fields.")
+        return;
+    }
+    else{
+        alert("Your Are Successfully Signed Up. Now we are redirected you to Login Page");
+        window.location.href = "login.html"
+    }
 }

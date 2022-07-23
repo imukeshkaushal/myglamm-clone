@@ -31,7 +31,7 @@ function display(cartData){
         sortPrice.innerText = el.shortPrice;
         let btn = document.createElement("p");
         btn.setAttribute("class","cartBtn");
-        btn.innerText = "+"
+        btn.innerText = "-"
         btn.addEventListener("click",function(){
             cartFunction(el,index);
         })
@@ -44,12 +44,29 @@ function display(cartData){
     })
     localStorage.setItem("price",price_total);
     localStorage.setItem("items",total);
+    if(total >= 1){
+        document.querySelector(".cart-line").innerText = "Congratulation For Shopping With Us";
+        totalCount.innerText = "Total Number of Items : "+total;
+        totalCount.setAttribute("style","font-size:18px; font-weight:bold")
+        totalPrice.innerText = "Your Total Cart Value : "+price_total;
+        totalPrice.setAttribute("style","font-size:18px; font-weight:bold")
+        let checkout_btn = document.createElement("button");
+        checkout_btn.innerText = "Checkout"
+        document.querySelector("#flex-total").append(checkout_btn);
+        document.querySelector("#total-price").style.border = "1px solid black";
+        document.querySelector("#total-price").style.boxShadow = "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px";
+        
+    }
+    if(total < 1){
+        let div = document.createElement("div");
+        let text = document.createElement("p");
+        text.innerText = "Oops! Your bag is empty!";
+        let img = document.createElement("img");
+        img.src = "https://www.myglamm.com/images/img-empty-shopping-cart.png";
+        div.append(text,img);
+        document.querySelector("#empty-bag").append(div);
+    }
 
-    totalCount.innerText = "Total Number of Items : "+total;
- 
-    totalCount.setAttribute("style","font-size:18px; font-weight:bold")
-    totalPrice.innerText = "Your Total Cart Value : "+price_total;
-    totalPrice.setAttribute("style","font-size:18px; font-weight:bold")
     document.querySelector("#flex-total>button").addEventListener("click",function(){
         if(price_total >= 100){
             alert("Thanks for Choosing the Items. Now we are redirected you to Checkout Page. Please Do Payment for Successfully Place Order.")
@@ -61,6 +78,9 @@ function display(cartData){
             
         }
     })
+ 
+    
+    
 }
 
 function cartFunction(el,index){
@@ -68,4 +88,6 @@ function cartFunction(el,index){
     display(cartData);
     localStorage.setItem("cartArr",JSON.stringify(cartData));
 }
+
+
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myglamm</title>
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="./styles/homepage.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     
 </head>
@@ -48,9 +48,9 @@
         <!-- Create Bottom Bar Like HomePage, Makeup Page & Other Functionallities -->
 
         <div id="bottomBar">
-            <div>HOME</div>
-            <div>MAKEUP</div>
-            <div>HAIRCARE</div>
+            <div><a href="index.html">HOME</a></div>
+            <div><a href="makeup.html">MAKEUP</a></div>
+            <div><a href="haircare.html">HAIRCARE</a></div>
             <div>SKINCARE</div>
             <div>SANITIZING CARE</div>
             <div>COLLECTION</div>
@@ -334,20 +334,42 @@
             <div>
                 <p>STAY CONNECTED</p>
                 <P>|</P>
-                <img src="https://www.myglamm.com/images/instagram.svg" alt="">
-                <img src="https://www.myglamm.com/images/twitter.svg" alt="">
-                <img src="https://www.myglamm.com/images/pinterest.svg" alt="">
-                <img src="https://www.myglamm.com/images/youtube.svg" alt="">
+                <img id="insta" src="https://www.myglamm.com/images/instagram.svg" alt="">
+                <img id="twitter" src="https://www.myglamm.com/images/twitter.svg" alt="">
+                <img id="pin" src="https://www.myglamm.com/images/pinterest.svg" alt="">
+                <img id="youtube" src="https://www.myglamm.com/images/youtube.svg" alt="">
             </div>
             <div>
                 <h5>EXPERIENCE MYGLAMM MOBILE APPS</h5>
                 <div id="applinks">.
-                    <img src="https://www.myglamm.com/images/iosStore.png" alt="">
-                    <img src="https://www.myglamm.com/images/playStore.png" alt="">
+                    <img id="android" src="https://www.myglamm.com/images/iosStore.png" alt="">
+                    <img id="apple" src="https://www.myglamm.com/images/playStore.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-<script src="homepage.js"></script>
+<script src="./scripts/homepage.js"></script>
+<script src="./scripts/navbar.js"></script>
+<script>
+document.querySelector("#insta").addEventListener("click",function(){
+    window.location.href = "https://www.instagram.com/myglamm/"
+})
+document.querySelector("#twitter").addEventListener("click",function(){
+    window.location.href = "https://twitter.com/MyGlamm"
+})
+document.querySelector("#pin").addEventListener("click",function(){
+    window.location.href = "https://www.pinterest.com/myglamm/"
+})
+document.querySelector("#youtube").addEventListener("click",function(){
+    window.location.href = "https://www.youtube.com/channel/UCrUxV9rsE-ivYxrgwkQhrjQ/featured"
+})
+document.querySelector("#android").addEventListener("click",function(){
+    window.location.href = "https://play.google.com/store/apps/details?id=com.myglamm.ecommerce"
+})
+document.querySelector("#pin").addEventListener("click",function(){
+    window.location.href = "https://apps.apple.com/in/app/myglamm-beauty-shopping-app/id1282962703"
+})
+
+</script>

@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="./styles/checkout.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <style>
+        #middlebar{
+            box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%);
+        }
+    </style>
 </head>
 <body>
+    <div id="middlebar">
+        <div id="logo-search">
+            <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="investor">
+            <input type="text" placeholder="Find Lipstick, Eyeliner, Makeup Tutorial, etc">
+        </div>
+        <div id="page-icons">
+            <img id="cart" src="https://cdn-icons-png.flaticon.com/512/126/126515.png" alt="">
+            <img id="login" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="">
+        </div>
+    </div>
+
     <div id="checkout-container">
         <h1>Checkout</h1>
         <div id="address-recipt">
@@ -66,4 +83,5 @@
     </div>
 </body>
 </html>
-<script src="checkout.js"></script>
+<script src="./scripts/checkout.js"></script>
+<script src="./scripts/navbar.js"></script>
