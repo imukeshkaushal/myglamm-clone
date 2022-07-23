@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <style>
+         body {
+        margin: 0;
+        padding: 0;
+      }
+      #container-payment {
+        width: 35%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        margin: auto;
+        height: auto;
+        font-family: sans-serif;
+        padding-left: 20px;
+        padding-top: 20px;
+        border-radius: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+      h3 {
+        text-align: center;
+        padding-right: 30px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],input[type="date"] {
+        line-height: 30px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border-radius: 0.375rem;
+        padding: 0.5rem 0.75rem;
+        width: 89%;
+        border: 1px solid rgba(128, 128, 128, 0.903);
+      }
+      select{
+        line-height: 30px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border-radius: 0.375rem;
+        padding: 0.5rem 0.75rem;
+        width: 95%;
+        height: 50px;
+        border: 1px solid rgba(128, 128, 128, 0.903);
+      }
+      p {
+        text-align: center;
+        padding-right: 30px;
+        font-size: 14px;
+        color: rgb(151, 150, 150);
+      }
+      form input[type="submit"] + p {
+        text-align: center;
+        padding-right: 30px;
+        font-size: 16px;
+        color: rgb(151, 150, 150);
+      }
+      span {
+        color: rgb(0, 98, 255);
+        cursor: pointer;
+      }
+      input[type="submit"] {
+        display: flex;
+        background-color: rgb(0, 98, 255);
+        color: white;
+        border: 0px;
+        height: 3rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+        width: 95%;
+        border-width: 1px;
+        margin-right: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(0, 98, 255);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="container-payment">
+        <form>
+          <h3>Enter Card Details</h3>
+          <label for="">Full Name</label><br />
+          <input type="text" id="name" placeholder="Enter Your Full Name" />
+  
+          <label for="">Card Number</label><br />
+          <input type="number" id="cardNumber" placeholder="Enter Card Number" />
+
+          <label for="">Card Type</label><br />
+          <select id="card">
+            <option>Select Card</option>
+            <option value="mastercard">Master Card</option>
+            <option value="rupaycard">Rupay Card</option>
+            <option value="visacard">Visa Card</option>
+          </select>
+
+          <label for="">CVV Number</label><br />
+          <input
+            type="number"
+            id="cvv"
+            placeholder="Enter CVV Number"
+          />
+          
+          <label for="">Expiry Date</label><br />
+          <input type="date" id="date" placeholder="Expiry Data" />
+
+          <p>
+            By filling up, I accept the Payment 
+            <span>Terms of Services</span> and acknowladgement the
+            <span>Privacy Policy</span>.
+          </p>
+  
+          <input type="submit" value="Submit" />
+          
+        </form>
+  </body>
+</html>
+<script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit",myFunction);
+    function myFunction(event){
+        event.preventDefault();
+        let obj = {
+            name : form.name.value,
+            cardNumber : form.cardNumber.value,
+            cardType : form.card.value,
+            cvv : form.cvv.value,
+            expireDate : form.date.value
+        }
+
+        if(obj.name == "" || obj.cardNumber == "" || obj.cardType == "" || obj.cvv == "" || obj.expireDate == ""){
+            alert("Input Fields Are Empty");
+            return;
+        }
+        else{
+            window.location.href = "otp.html";
+        }
+    }
+</script>

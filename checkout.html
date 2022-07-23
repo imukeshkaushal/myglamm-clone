@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div id="checkout-container">
+        <h1>Checkout</h1>
+        <div id="address-recipt">
+            <div id="address">
+                <h2>Address</h2>
+                <form>
+
+                    <label for="">House No</label>
+                    <input id="text" placeholder="Enter House No." type="text" />
+
+                    <label for="">Village/City</label>
+                    <input id="text" placeholder="Enter Village/City" type="text" />
+
+                    <label for="">District</label>
+                    <input id="text" placeholder="Enter District" type="text" />
+
+                    <label for="">State</label>
+                    <input id="text" placeholder="Enter Your State" type="text" />
+
+                    <label for="">Pin Code</label>
+                    <input id="number" placeholder="Enter Pin Code" type="number" />
+
+                </form>
+                
+            </div>
+            <div id="recipt">
+                <P>Apply Promo Code</P>
+                <input id="promo-code" type="text">
+                <button id="apply">APPLY</button>
+                <P>Order Summary</P>
+                <div id="bill">
+                    <div>Actual Amount</div>
+                    <div id="amounted">Rs. 239</div>
+                </div>
+                <div id="bill">
+                    <div>Shipping Charges</div>
+                    <div id="shipping"></div>
+                </div>
+                <div id="bill">
+                    <div>Discount</div>
+                    <div id="discount">Rs. 0</div>
+                </div>
+                <div id="paying">
+                    <div id="bill">
+                        <div>
+                            <div>Amount to Pay</div>
+                            <p class="note">Note: Inclusive of all taxes</p>
+                        </div>
+                        
+                        <div id="total-amount">Rs. 0</div>
+                    </div>
+                </div>
+                <button  id="btn-pay">PROCEED TO PAYMENT</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="checkout.js"></script>
