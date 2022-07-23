@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        #container-otp{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            width: 40%;
+            height: auto;
+            margin: auto;
+            margin-top: 15%;
+            text-align: center;
+            padding-bottom: 20px;
+            font-family: sans-serif;
+            border-radius: 20px;
+            padding-top: 20px;
+        }
+        label{
+            color: red;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+        }
+        input{
+            line-height: 30px;
+            width: 40%;
+            margin-left: 20px;
+            padding-left: 10px;
+            font-size: 14px;
+            border-radius: 10px;
+        }
+        button{
+            padding: 8px 20px;
+            background-color: rgb(7, 73, 187);
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+        }
+        body {
+        margin: 0;
+        padding: 0;
+      }
+     
+        
+    </style>
+</head>
+<body>
+    <div id="container-otp">
+        <h3>Confirm Payment</h3>
+        <div>
+            
+            <p>OTP is sent Successfully in your registered mobile number.</p>
+            <label>Enter OTP</label>
+            <input type="number" id = "otp" placeholder="Enter 6 Digit OTP">
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let button= document.querySelector("button");
+    button.addEventListener("click",myFunction);
+    
+    function myFunction(el){
+        let otp = document.querySelector("#otp").value;
+        if(otp === "123456"){
+            alert("Payment Successfully");
+            window.location.href = "index.html"
+        }
+        else{
+            alert("You Entered Wrong OTP. Please Enter Correct OTP which is sent on your registered mobile number.")
+        }
+    }
+</script>
